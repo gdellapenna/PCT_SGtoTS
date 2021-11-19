@@ -119,7 +119,7 @@ public class SpatialToString {
                 it.remove();
             }
         }
-        if (!useless_symbols.isEmpty()) {
+        if (!useless_symbols.isEmpty()) { //Andrea's fix
             removeUselessProductions(g);
         }
     }
