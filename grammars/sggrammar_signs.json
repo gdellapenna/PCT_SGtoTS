@@ -1,0 +1,24 @@
+{
+    "terminals": ["triangle","rcircle","bcircle","udarr","slash","rlarr","rarr","30"],
+    "nonterminals": ["S","W","F","R","CW","CF","CFB","CFP","CR","N","A"],  
+    "start": ["S"],
+    "productions": [
+        { "S": [[], "W"]},
+        { "S": [[], "F"]},
+        { "S": [[], "R"]},
+        { "W": [[], "CW", {"INSIDE":1}, "triangle"]},
+        { "F": [[], "CF", {"INSIDE":1}, "rcircle"]},
+        { "F": [[], "rcircle"]},
+        { "R": [[], "CR", {"INSIDE":1}, "bcircle"]},
+        { "CW": [[], "udarr"]},
+        { "CF": [[], "CFB"]},
+        { "CF": [[], "slash", {"INTERSECT":1}, "CFB"]},
+        { "CF": [[], "CFP"]},
+        { "CFB": [[], "N"]},
+        { "CFB": [[], "N", {"INSIDE":1}, "rlarr"]},
+        { "N": [[], "30"]},
+        { "CFP": [[], "slash", {"INTERSECT":1}, "bcircle"]},
+        { "CR": [[], "A"]},
+        { "A": [[], "rarr"]}	        
+    ]    
+}

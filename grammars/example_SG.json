@@ -1,0 +1,11 @@
+{
+    "terminals": ["x", "y", "z"],
+    "nonterminals": ["A", "B", "S"],  
+    "start": ["S"],
+    "productions": [
+        { "A": [[2], "x", {"DOWN": 1}, "y"]},
+        { "A": [[], "z"]},
+        { "B": [[], "y", {"LEFT": 1}, "x"]},
+        { "S": [[], "A", {"LEFT": 1}, "B", {"UP": 2}, "x"]}
+    ]    
+}
