@@ -76,9 +76,6 @@ public class Example_SG2Y {
             System.out.println("Output translation scheme: ");            
             System.out.println(sg_tschema);
 
-            //System.out.println("Esempio di sentenza:");
-            //System.out.println(sg_tschema.getRandomSentence());
-
         } catch (GrammarException ex) {
             Logger.getLogger(Example_SG2Y.class.getName()).log(Level.SEVERE, null, ex);
         } catch (FileNotFoundException ex) {
